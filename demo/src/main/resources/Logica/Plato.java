@@ -24,4 +24,11 @@ public class Plato {
         }
         return descripcion;
     }
+    public double getPrecio() {
+        precio = 0;
+        for (Comida comida : comida) {
+            precio += comida.getPrecio();
+        }
+        return precio;
+    }
 }
