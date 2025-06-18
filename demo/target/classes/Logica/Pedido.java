@@ -2,13 +2,13 @@ package Logica;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Plato {
+public class Pedido {
     private List<Comida> comida = new ArrayList<>(); 
     private String nombre;
     private double precio;
     private String descripcion;
 
-    public Plato(String nombre, double precio, String descripcion) {
+    public Pedido(String nombre, double precio, String descripcion) {
         this.nombre = nombre;
     }
     public void addComida(Comida comida) {
