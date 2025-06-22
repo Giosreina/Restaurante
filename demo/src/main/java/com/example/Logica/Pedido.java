@@ -28,15 +28,23 @@ public class Pedido extends Agregado {
     }
     public String getDescripcion() {
         descripcion = "Plato: " + nombre + "\n";
-        for (Comida comida : comidas) {
-            descripcion += comida.getNombre() + comida.getDescripcion() + "\n";
+        Iterator iterador = crearIterator();
+        for (iterador.getPosicion() ; iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
+            if (iterador.actual() instanceof Comida) {
+                Comida comida = (Comida) iterador.actual();
+                descripcion += comida.getDescripcion() + "\n";
+            }
         }
         return descripcion;
     }
     public double getPrecio() {
         precio = 0;
-        for (Comida comida : comidas) {
-            precio += comida.getPrecio();
+        Iterator iterador = crearIterator();
+        for (iterador.getPosicion() ; iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
+            if (iterador.actual() instanceof Comida) {
+                Comida comida = (Comida) iterador.actual();
+                precio += comida.getPrecio();
+            }
         }
         return precio;
     }
@@ -52,7 +60,7 @@ public class Pedido extends Agregado {
         return comidas.size();
     }
 
-    public Object obtenerElemento(int indice){
+    public Comida obtenerElemento(int indice){
         if (indice < 0 || indice >= comidas.size()) {
             return null; // Manejo de índice fuera de rango
         }

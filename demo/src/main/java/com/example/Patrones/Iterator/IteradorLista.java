@@ -33,5 +33,7 @@ public class IteradorLista extends Iterator {
         }
         return agregado.obtenerElemento(posicion);
     }
-    
+    public int getPosicion() {
+        return posicion;
+    }
 }
