@@ -15,7 +15,6 @@ public class Factura {
         this.cliente = cliente;
         this.distribuidor = distribuidor;
         this.compras = compras;
-        this.estado = estado;
     }
     public double getPrecio() {
         return compras.getPrecio();
