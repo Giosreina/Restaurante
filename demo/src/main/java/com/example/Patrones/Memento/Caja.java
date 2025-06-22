@@ -2,10 +2,13 @@ package com.example.Patrones.Memento;
 
 import com.example.Logica.Factura;
 
+import com.example.Patrones.Bridge.*;
 
 public class Caja{
     private double dinero = 0.0;
     private Factura factura;
+    private MetodoDePago metodoDePago;
+    private Pago pago;
 
     public void setFactura(Factura factura) {
         this.factura = factura;
