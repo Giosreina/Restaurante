@@ -3,8 +3,9 @@ package com.example.Patrones.Memento;
 import com.example.Logica.Factura;
 
 import com.example.Patrones.Bridge.*;
+import com.example.Patrones.Visitor.*;
 
-public class Caja{
+public class Caja implements ElementoVisitado {
     private double dinero = 0.0;
     private Factura factura;
     private MetodoDePago metodoDePago;
@@ -29,5 +30,9 @@ public class Caja{
     public void restoreCaja(CajaPasada cajaPasada) {
         this.dinero = cajaPasada.getCaja().getDinero();
         this.factura = cajaPasada.getCaja().getFactura();
+    }
+    @Override
+    public void aceptar(Visitor v) {
+        v.visitarCaja(this);
     }
 }

@@ -2,8 +2,9 @@ package com.example.Logica;
 import java.util.ArrayList;
 import java.util.List;
 import com.example.Patrones.Iterator.*;
+import com.example.Patrones.Visitor.*;
 
-public class Pedido extends Agregado {
+public class Pedido extends Agregado implements ElementoVisitado {
     private List<Comida> comidas = new ArrayList<>(); 
     private String nombre;
     private double precio;
@@ -65,5 +66,9 @@ public class Pedido extends Agregado {
             return null; // Manejo de índice fuera de rango
         }
         return comidas.get(indice);
+    }
+    @Override
+    public void aceptar(Visitor v) {
+        v.visitarPedido(this);
     }
 }
