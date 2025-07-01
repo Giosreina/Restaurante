@@ -1,6 +1,12 @@
 package com.example.Patrones.Observer.Observer;
 import com.example.Logica.Pedido;
-public abstract class Personal {
+import com.example.Logica.Persona;
+
+public abstract class Personal extends Persona{
+
+    public Personal(String nombre) {
+        super(nombre);
+    }
     public abstract void actualizar(Pedido pedido);
     public abstract String preparar();
     public abstract void asignarTurno(String turno);

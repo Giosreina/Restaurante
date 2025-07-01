@@ -53,13 +53,16 @@ public class Pedido extends Agregado {
     }
     // Métodos de agregado para la implementación del patrón Iterator
 
+    @Override
     public Iterator crearIterator(){
         return new IteradorLista(this);
     }
+    @Override
     public int cantidadElementos(){
         return comidas.size();
     }
 
+    @Override
     public Comida obtenerElemento(int indice){
         if (indice < 0 || indice >= comidas.size()) {
             return null; // Manejo de índice fuera de rango

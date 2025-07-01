@@ -1,13 +1,14 @@
 package com.example.Patrones.ChainOfResponsability;
 
 import com.example.Logica.Comida;
+import com.example.Logica.Persona;
 
-public abstract class CocineroEncargado implements Encargado{
+public abstract class CocineroEncargado extends Persona implements Encargado{
     private Encargado next;
     private String nombre;
     private String condicion;
     public CocineroEncargado (String nombre, String condicion) {
-        this.nombre = nombre;
+        super(nombre);
         this.condicion = condicion;
     }
     public void setNext(Encargado next){

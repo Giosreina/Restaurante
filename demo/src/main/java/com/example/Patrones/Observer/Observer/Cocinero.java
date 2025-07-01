@@ -1,10 +1,15 @@
 package com.example.Patrones.Observer.Observer;
 import com.example.Logica.Pedido;
 import com.example.Patrones.Prototype.*;
+
 public class Cocinero extends Personal {
     private boolean disponibilidad = true;
     private Pedido pedido;
     private TurnoPrototype turnoCocinero;
+
+    public Cocinero(String nombre) {
+        super(nombre);
+    }
 
     public void actualizar(Pedido pedido) {
         if (disponibilidad) {
