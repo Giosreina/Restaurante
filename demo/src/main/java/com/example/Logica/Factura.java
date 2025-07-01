@@ -1,6 +1,5 @@
 package com.example.Logica;
 import java.util.Date;
-import com.example.Patrones.Visitor.*;
 
 public class Factura {
     private int id;
@@ -9,7 +8,6 @@ public class Factura {
     private Pedido compras;
     private Date FECHA = new Date();
     private boolean estado = false; // false = pendiente, true = pagada
-    private Visitor v = new VisitorImpresion();
 
     public Factura(int id, String cliente, String distribuidor, Pedido compras) {
         this.id = id;
@@ -18,7 +16,7 @@ public class Factura {
         this.compras = compras;
     }
     public double getPrecio() {
-        return v.visitarPedido(compras);
+        return compras.getPrecio();
     }
     public int getId() {
         return id;

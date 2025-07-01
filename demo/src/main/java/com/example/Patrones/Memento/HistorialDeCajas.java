@@ -3,15 +3,13 @@ import java.util.Map;
 
 import java.util.HashMap;
 import java.util.Date;
-import com.example.Patrones.Visitor.*;
 
 public class HistorialDeCajas {
     private Map<Date, CajaPasada> historial = new HashMap<>();
-    private Visitor visitor = new VisitorImpresion();
     private Caja caja;
 
     public void addCaja(Caja caja) {
-        historial.put(caja.getFactura().getFecha(), visitor.visitarCaja(caja));
+        historial.put(caja.getFactura().getFecha(), caja.saveCaja());
     }
 
     public CajaPasada getCaja(CajaPasada cajaPasada) {

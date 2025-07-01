@@ -1,9 +1,5 @@
 package com.example.Patrones.Singleton;
-import com.example.Patrones.MethodFactory.*;
 import com.example.Patrones.Singleton.Cajero;
-
-import org.w3c.dom.events.MouseEvent;
-
 import com.example.Logica.Pedido;
 
 import com.example.Patrones.Memento.Caja;
@@ -16,10 +12,8 @@ public class Cajero {
     private String nombre;
     private String cedula;
     private String id;
-    private Fabricas fabrica = new LlamadoFactura();
     private Caja caja = new Caja();
     private HistorialDeCajas historial;
-    private MetodoDePago metodoDePago;
     private Pago pago;
 
     private Cajero(String nombre, String cedula, String id, HistorialDeCajas historial) {
@@ -36,7 +30,8 @@ public class Cajero {
     }
     public void cobrarFactura(int id, String cliente, String distribuidor, Pedido compras, MetodoDePago metodoDePago) {
         pago = new Pago(metodoDePago);
-        pago.procesarPago(id, cliente, distribuidor, compras);
+
+        pago.procesarPago(id, cliente, distribuidor, compras, historial);
     }
     public String getNombre() {
         return nombre;

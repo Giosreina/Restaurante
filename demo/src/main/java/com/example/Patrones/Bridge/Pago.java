@@ -1,6 +1,7 @@
 package com.example.Patrones.Bridge;
 
 import com.example.Logica.Pedido;
+import com.example.Patrones.Memento.HistorialDeCajas;
 
 public class Pago {
     private MetodoDePago metodoDePago;
@@ -9,8 +10,8 @@ public class Pago {
         this.metodoDePago = metodoDePago;
     }
 
-    public void procesarPago(int id, String cliente, String distribuidor, Pedido compras) {
-        metodoDePago.procesarPago(id, cliente, distribuidor, compras);
+    public void procesarPago(int id, String cliente, String distribuidor, Pedido compras, HistorialDeCajas historial) {
+        metodoDePago.procesarPago(id, cliente, distribuidor, compras, historial);
     }
 }
 
