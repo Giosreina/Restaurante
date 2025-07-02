@@ -34,4 +34,9 @@ public class Almacen extends Agregado{
             ingredientes.remove(ingrediente.getNombre());
         }
     }    
+
+    @Override
+    public void agregarElemento() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

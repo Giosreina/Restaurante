@@ -15,6 +15,6 @@ public class PagoPorTarjeta extends MetodoDePago {
         if (cuentaRestaurante == null) {
             cuentaRestaurante = CuentaRestaurante.getInstancia();
         }
-        cuentaRestaurante.meterDinero(fabrica.crearFactura(id, cliente, distribuidor, compras).getPrecio());
+        cuentaRestaurante.recibirDinero(fabrica.crearFactura(id, cliente, distribuidor, compras).getPrecio());
     }
 }

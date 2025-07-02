@@ -9,6 +9,6 @@ public class PagoPorNequi extends MetodoDePago {
 
     @Override
     public void procesarPago(int id, String cliente, String distribuidor, Pedido compras) {
-        nequi.meterDinero(fabrica.crearFactura(id, cliente, distribuidor, compras).getPrecio());
+        nequi.recibirDinero(fabrica.crearFactura(id, cliente, distribuidor, compras).getPrecio());
     }
 }

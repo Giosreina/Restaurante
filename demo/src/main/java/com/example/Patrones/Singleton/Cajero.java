@@ -11,7 +11,6 @@ import com.example.Patrones.Prototype.*;
 
 public class Cajero extends Personal {
     private static Cajero instancia;
-    private String nombre;
     private String cedula;
     private String id;
     private Caja caja = new Caja();
@@ -21,7 +20,6 @@ public class Cajero extends Personal {
 
     private Cajero(String nombre, String cedula, String id, Caja caja) {
         super(nombre);
-        this.nombre = nombre;
         this.cedula = cedula;
         this.id = id;
         this.caja = caja;

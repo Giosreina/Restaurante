@@ -12,7 +12,7 @@ public class AdicionGuacamole extends AdicionAbstract{
     
     @Override
     public void agregarElemento(Object comida) {
-        pedido.agregarElemento(new Alimento("Guacamole", 3500, "COMIDA", "Aguacate, tomate, cebolla y limon"));
+        
     }
 
     @Override
@@ -33,5 +33,10 @@ public class AdicionGuacamole extends AdicionAbstract{
     @Override
     public Iterator crearIterator() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void agregarElemento() {
+        pedido.agregarElemento(new Alimento("Guacamole", 3500, "COMIDA", "Aguacate, tomate, cebolla y limon"));
     }
 }

@@ -1,10 +1,12 @@
 package com.example.Logica;
+
 import java.util.ArrayList;
 import java.util.List;
 import com.example.Patrones.Iterator.*;
 
 public class Pedido extends Agregado {
-    private List<Alimento> comidas = new ArrayList<>(); 
+
+    private List<Alimento> comidas = new ArrayList<>();
     private String nombre;
     private double precio;
     private String descripcion;
@@ -13,13 +15,13 @@ public class Pedido extends Agregado {
     public Pedido(String nombre) {
         this.nombre = nombre;
     }
+
     @Override
     public void agregarElemento(Object comida) {
         if (comida instanceof Alimento) {
             this.comidas.add((Alimento) comida);
         }
     }
-    
 
     @Override
     public void eliminarElemento(Object comida) {
@@ -27,21 +29,24 @@ public class Pedido extends Agregado {
             this.comidas.remove((Alimento) comida);
         }
     }
+
     public String getDescripcion() {
         descripcion = "Plato: " + nombre + "\n";
+        System.out.println(comidas.size());
         Iterator iterador = crearIterator();
-        for (iterador.getPosicion() ; iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
+        for (iterador.getPosicion(); iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
             if (iterador.actual() instanceof Alimento) {
                 Alimento comida = (Alimento) iterador.actual();
-                descripcion += comida.getDescripcion() + "\n";
+                descripcion += comida.getNombre() + "\n";
             }
         }
         return descripcion;
     }
+
     public double getPrecio() {
         precio = 0;
         Iterator iterador = crearIterator();
-        for (iterador.getPosicion() ; iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
+        for (iterador.getPosicion(); iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
             if (iterador.actual() instanceof Alimento) {
                 Alimento comida = (Alimento) iterador.actual();
                 precio += comida.getPrecio();
@@ -49,25 +54,32 @@ public class Pedido extends Agregado {
         }
         return precio;
     }
+
     public String getTipoComida() {
         return tipoComida;
     }
     // Métodos de agregado para la implementación del patrón Iterator
 
     @Override
-    public Iterator crearIterator(){
+    public Iterator crearIterator() {
         return new IteradorLista(this);
     }
+
     @Override
-    public int cantidadElementos(){
+    public int cantidadElementos() {
         return comidas.size();
     }
 
     @Override
-    public Alimento obtenerElemento(int indice){
+    public Alimento obtenerElemento(int indice) {
         if (indice < 0 || indice >= comidas.size()) {
             return null; // Manejo de índice fuera de rango
         }
         return comidas.get(indice);
+    }
+
+    @Override
+    public void agregarElemento() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
