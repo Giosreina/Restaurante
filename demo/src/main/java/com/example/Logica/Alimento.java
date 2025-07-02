@@ -1,12 +1,12 @@
 package com.example.Logica;
 
-public class Comida {
+public class Alimento {
     private String nombre;
     private double precio;
     private String tipoComida;
     private String descripcion;
 
-    public Comida(String nombre, double precio, String tipoComida, String descripcion) {
+    public Alimento(String nombre, double precio, String tipoComida, String descripcion) {
         this.nombre = nombre;
         this.precio = precio;
         this.tipoComida = tipoComida;

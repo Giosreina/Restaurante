@@ -1,6 +1,6 @@
 package com.example.Patrones.ChainOfResponsability;
 
-import com.example.Logica.Comida;
+import com.example.Logica.Alimento;
 import com.example.Logica.Persona;
 
 public abstract class CocineroEncargado extends Persona implements Encargado{
@@ -14,7 +14,7 @@ public abstract class CocineroEncargado extends Persona implements Encargado{
     public void setNext(Encargado next){
         this.next = next;
     }
-    public String procesarSolicitud(Comida comida){
+    public String procesarSolicitud(Alimento comida){
         String mensaje = "";
 
         if(comida.getTipoComida().equals(condicion)) {

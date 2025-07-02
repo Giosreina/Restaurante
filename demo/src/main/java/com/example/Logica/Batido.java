@@ -1,6 +1,6 @@
 package com.example.Logica;
 
-public class Batido extends Comida{
+public class Batido extends Alimento{
     private String Fruta1, Fruta2, Fruta3;
     private boolean lecheCondensada, azucar;
 

@@ -4,7 +4,7 @@ import java.util.List;
 import com.example.Patrones.Iterator.*;
 
 public class Pedido extends Agregado {
-    private List<Comida> comidas = new ArrayList<>(); 
+    private List<Alimento> comidas = new ArrayList<>(); 
     private String nombre;
     private double precio;
     private String descripcion;
@@ -15,23 +15,23 @@ public class Pedido extends Agregado {
     }
     @Override
     public void agregarElemento(Object comida) {
-        if (comida instanceof Comida) {
-            this.comidas.add((Comida) comida);
+        if (comida instanceof Alimento) {
+            this.comidas.add((Alimento) comida);
         }
     }
 
     @Override
     public void eliminarElemento(Object comida) {
-        if (comida instanceof Comida) {
-            this.comidas.remove((Comida) comida);
+        if (comida instanceof Alimento) {
+            this.comidas.remove((Alimento) comida);
         }
     }
     public String getDescripcion() {
         descripcion = "Plato: " + nombre + "\n";
         Iterator iterador = crearIterator();
         for (iterador.getPosicion() ; iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
-            if (iterador.actual() instanceof Comida) {
-                Comida comida = (Comida) iterador.actual();
+            if (iterador.actual() instanceof Alimento) {
+                Alimento comida = (Alimento) iterador.actual();
                 descripcion += comida.getDescripcion() + "\n";
             }
         }
@@ -41,8 +41,8 @@ public class Pedido extends Agregado {
         precio = 0;
         Iterator iterador = crearIterator();
         for (iterador.getPosicion() ; iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
-            if (iterador.actual() instanceof Comida) {
-                Comida comida = (Comida) iterador.actual();
+            if (iterador.actual() instanceof Alimento) {
+                Alimento comida = (Alimento) iterador.actual();
                 precio += comida.getPrecio();
             }
         }
@@ -63,7 +63,7 @@ public class Pedido extends Agregado {
     }
 
     @Override
-    public Comida obtenerElemento(int indice){
+    public Alimento obtenerElemento(int indice){
         if (indice < 0 || indice >= comidas.size()) {
             return null; // Manejo de índice fuera de rango
         }

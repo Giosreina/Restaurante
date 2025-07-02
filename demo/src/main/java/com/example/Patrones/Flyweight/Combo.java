@@ -1,5 +1,5 @@
 package com.example.Patrones.Flyweight;
-import com.example.Logica.Comida;
+import com.example.Logica.Alimento;
 import com.example.Logica.Pedido;
 
 public class Combo {
@@ -13,7 +13,7 @@ public class Combo {
     public double getPrecio(){
         return comidas.getPrecio() * descuento;
     }
-    public void eliminarComida(Comida comida){
+    public void eliminarComida(Alimento comida){
         comidas.eliminarElemento(comida);
     }
 }

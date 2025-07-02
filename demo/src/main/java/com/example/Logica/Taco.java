@@ -1,6 +1,6 @@
 package com.example.Logica;
 
-public class Taco extends Comida{
+public class Taco extends Alimento{
     private String tipoTortilla;
     private String tipoCarne;
     private String vegetales;
