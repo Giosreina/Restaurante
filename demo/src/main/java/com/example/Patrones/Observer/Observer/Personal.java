@@ -8,6 +8,6 @@ public abstract class Personal extends Persona{
         super(nombre);
     }
     public abstract void actualizar(Pedido pedido);
-    public abstract String preparar();
+    public abstract String realizarTarea();
     public abstract void asignarTurno(String turno);
 }

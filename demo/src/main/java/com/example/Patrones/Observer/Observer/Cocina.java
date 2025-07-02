@@ -18,4 +18,8 @@ public class Cocina{
             personal.actualizar(pedidos.get(pedidos.size()-1));
         }
     }
+
+    public ArrayList<Pedido> getPedidos() {
+        return pedidos;
+    }
 }    

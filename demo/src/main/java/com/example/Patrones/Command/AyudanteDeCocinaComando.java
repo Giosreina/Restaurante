@@ -8,6 +8,6 @@ public class AyudanteDeCocinaComando extends Comando{
     }
 
     public String preparar(){
-        return ayudanteDeCocina.preparar();
+        return ayudanteDeCocina.realizarTarea();
     }
 }

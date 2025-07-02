@@ -19,6 +19,7 @@ public class Pedido extends Agregado {
             this.comidas.add((Alimento) comida);
         }
     }
+    
 
     @Override
     public void eliminarElemento(Object comida) {

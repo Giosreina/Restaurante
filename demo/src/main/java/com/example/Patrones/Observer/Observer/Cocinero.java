@@ -20,7 +20,7 @@ public class Cocinero extends Personal {
         }
     }
 
-    public String preparar() {
+    public String realizarTarea() {
         disponibilidad = true; // Reset availability after preparing
         return "preparando " + pedido.getTipoComida();
     }

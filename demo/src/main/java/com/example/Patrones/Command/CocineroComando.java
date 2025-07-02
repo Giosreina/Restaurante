@@ -9,6 +9,6 @@ public class CocineroComando extends Comando{
 
     @Override
     public String preparar(){
-        return cocinero.preparar();
+        return cocinero.realizarTarea();
     }
 }
