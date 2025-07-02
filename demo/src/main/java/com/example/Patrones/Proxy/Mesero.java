@@ -5,37 +5,43 @@ import com.example.Patrones.Observer.Observer.Cocina;
 import com.example.Patrones.Observer.Observer.Personal;
 import com.example.Patrones.Prototype.HorariosDisponibles;
 import com.example.Patrones.Prototype.TurnoPrototype;
+import com.example.Utilities.SalidaTerminal;
 
-public class Mesero extends Personal{
+public class Mesero extends Personal {
+
     private TurnoPrototype turnoMesero;
     private Cocina cocina;
     private Pedido pedidoActual;
+    private SalidaTerminal salida = new SalidaTerminal();
 
     public Mesero(String nombre, Cocina cocina) {
         super(nombre);
         this.cocina = cocina;
     }
-    
-    public void tomarPedido(Pedido pedido){
+
+    public void tomarPedido(Pedido pedido) {
         this.pedidoActual = pedido;
+        realizarTarea();
     }
-    
+
     @Override
     public void actualizar(Pedido pedido) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public String realizarTarea() {
-        if(pedidoActual != null){
-            if(!cocina.getPedidos().contains(pedidoActual)){
+    public void realizarTarea() {
+        if (pedidoActual != null) {
+            if (!cocina.getPedidos().contains(pedidoActual)) {
                 cocina.añadirPedidos(pedidoActual);
                 pedidoActual = null;
-                return "El mesero "+nombre+" a enviado el pedido a la cocina";
+                salida.imprimir("El mesero " + nombre + " ha enviado el pedido a la cocina");
+            } else {
+                salida.imprimir("El pedido ya está siendo preparado");
             }
-            return "El pedido ya esta siendo preparado";
+        } else {
+            salida.imprimir("No hay pedido existente");
         }
-        return "No hay pedido existente";
     }
 
     @Override

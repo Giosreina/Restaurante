@@ -56,6 +56,10 @@ C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\m
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Proxy\Mesero.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Singleton\Cajero.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Singleton\CuentaRestaurante.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Strategy\EntregaDomicilio.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Strategy\EntregaRappi.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Strategy\EntregaSitio.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Strategy\EstrategiaEntrega.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\Almacen.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\ElementoRestaurante.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\Equipo.java

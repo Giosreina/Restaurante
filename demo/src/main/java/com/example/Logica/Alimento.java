@@ -5,12 +5,17 @@ public class Alimento {
     private double precio;
     private String tipoComida;
     private String descripcion;
+    private boolean estado; //preparado(true), no preparado(false)
+    private Pedido pedido;
 
-    public Alimento(String nombre, double precio, String tipoComida, String descripcion) {
+    public Alimento(String nombre, double precio, String tipoComida, String descripcion, Pedido pedido) {
         this.nombre = nombre;
         this.precio = precio;
         this.tipoComida = tipoComida;
         this.descripcion = descripcion;
+        estado = false;
+        this.pedido = (Pedido) pedido;
+        pedido.agregarElemento(this);
     }
 
     public String getNombre() {
@@ -26,4 +31,22 @@ public class Alimento {
     public String getDescripcion() {
         return descripcion;
     }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+        pedido.actualizarEstado();
+    }
+
+    public Pedido getPedido() {
+        return this.pedido;
+    }
+
+    public void setPedido(Pedido  pedido) {
+        this.pedido = pedido;
+    }
+    
 }

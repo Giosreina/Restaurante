@@ -21,12 +21,10 @@ public class GrupoPersonal extends Personal{
     }
 
     @Override
-    public String realizarTarea() {
-        String respuesta = "";
+    public void realizarTarea() {
         for(Personal personal : grupoPersonal){
-            respuesta += personal.realizarTarea();
+            personal.realizarTarea();
         }
-        return respuesta;
     }
 
     @Override

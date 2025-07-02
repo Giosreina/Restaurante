@@ -1,11 +1,12 @@
 package com.example.Patrones.Observer.Observer;
 import com.example.Logica.Pedido;
+import com.example.Patrones.Prototype.HorariosDisponibles;
 import com.example.Patrones.Prototype.*;
 
 public class Cocinero extends Personal {
-    private boolean disponibilidad = true;
+    private boolean disponibilidad;
     private Pedido pedido;
-    private TurnoPrototype turnoCocinero;
+    private TurnoPrototype turnoAyudante;
 
     public Cocinero(String nombre) {
         super(nombre);
@@ -20,12 +21,11 @@ public class Cocinero extends Personal {
         }
     }
 
-    public String realizarTarea() {
-        disponibilidad = true; // Reset availability after preparing
-        return "preparando " + pedido.getTipoComida();
+    public void realizarTarea() {
     }
+
     public void asignarTurno(String turno){
         HorariosDisponibles horariosDisponibles = new HorariosDisponibles();
-        turnoCocinero = horariosDisponibles.obtenerTurno(turno);
+        turnoAyudante = horariosDisponibles.obtenerTurno(turno);
     }
 }

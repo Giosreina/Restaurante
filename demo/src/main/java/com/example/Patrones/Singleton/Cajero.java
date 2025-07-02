@@ -58,8 +58,7 @@ public class Cajero extends Personal {
     public void actualizar(Pedido pedido){
         this.compras = pedido;
     }
-    public String realizarTarea(){
-        return "cobrando";
+    public void realizarTarea(){
     }
     public void asignarTurno(String turno){
         this.turnoCajero = new HorariosDisponibles().obtenerTurno(turno);

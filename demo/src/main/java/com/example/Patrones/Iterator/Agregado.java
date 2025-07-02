@@ -13,4 +13,5 @@ public abstract class Agregado {
     public abstract void agregarElemento();
 
     public abstract void eliminarElemento(Object comida);
+
 }

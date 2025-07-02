@@ -6,7 +6,7 @@ public class CocinaInvocadora {
         this.comando = comando;
     }
 
-    public String ejecutarComando(){
-        return comando.preparar();
+    public void ejecutarComando(){
+        comando.preparar();
     }
 }

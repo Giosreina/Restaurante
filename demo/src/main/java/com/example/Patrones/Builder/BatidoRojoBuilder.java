@@ -1,6 +1,8 @@
 package com.example.Patrones.Builder;
 
 import com.example.Logica.Batido;
+import com.example.Logica.Pedido;
+import com.example.Patrones.Iterator.Agregado;
 
 public class BatidoRojoBuilder extends BatidoBuilder{
     private String Fruta1, Fruta2, Fruta3;
@@ -37,7 +39,7 @@ public class BatidoRojoBuilder extends BatidoBuilder{
     }
 
     @Override
-    public Batido preparar() {
-        return new Batido(Fruta1, Fruta2, Fruta3, lecheCondensada, azucar, "BATIDO ROJO", 8500, "Fresa, mora y sandía con azúcar.");
+    public Batido preparar(Agregado pedido) {
+        return new Batido(Fruta1, Fruta2, Fruta3, lecheCondensada, azucar, "BATIDO ROJO", 8500, "Fresa, mora y sandía con azúcar.", (Pedido) pedido);
     }
 }

@@ -1,25 +1,33 @@
 package com.example.Logica;
 
 import java.util.ArrayList;
-import java.util.List;
 import com.example.Patrones.Iterator.*;
 
 public class Pedido extends Agregado {
 
-    private List<Alimento> comidas = new ArrayList<>();
+    private ArrayList<Alimento> comidas = new ArrayList<>();
     private String nombre;
     private double precio;
     private String descripcion;
     private String tipoComida;
+    private boolean estado; //preparado(true), no preparado(false)
+    private String metodoEntrega; //En restaurante, domicilio restaurante o domicilio por terceros
 
-    public Pedido(String nombre) {
+    public Pedido(String nombre, String metodoEntrega) {
         this.nombre = nombre;
+        this.metodoEntrega = metodoEntrega;
+        metodoEntrega = "RESTAURANTE";
+        estado = false;
+    }
+
+    public ArrayList<Alimento> getPedido() {
+        return comidas;
     }
 
     @Override
     public void agregarElemento(Object comida) {
         if (comida instanceof Alimento) {
-            this.comidas.add((Alimento) comida);
+            comidas.add((Alimento) comida);
         }
     }
 
@@ -32,7 +40,6 @@ public class Pedido extends Agregado {
 
     public String getDescripcion() {
         descripcion = "Plato: " + nombre + "\n";
-        System.out.println(comidas.size());
         Iterator iterador = crearIterator();
         for (iterador.getPosicion(); iterador.getPosicion() < comidas.size(); iterador.siguiente()) {
             if (iterador.actual() instanceof Alimento) {
@@ -82,4 +89,30 @@ public class Pedido extends Agregado {
     public void agregarElemento() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    public void actualizarEstado() {
+        int contador = 0;
+        for (Alimento alimento : comidas) {
+            if (alimento.isEstado()) {
+                contador++;
+            }
+        }
+        if (contador == comidas.size()) {
+            this.estado = true;
+        }
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getMetodoEntrega() {
+        return metodoEntrega;
+    }
+
+    
 }

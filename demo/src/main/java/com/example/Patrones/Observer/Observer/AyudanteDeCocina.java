@@ -21,8 +21,7 @@ public class AyudanteDeCocina extends Personal {
         }
     }
 
-    public String realizarTarea() {
-        return "preparando " + pedido.getTipoComida();
+    public void realizarTarea() {
     }
 
     public void asignarTurno(String turno){

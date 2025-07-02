@@ -1,12 +1,12 @@
 package com.example.Patrones.Decorator;
 
 import com.example.Logica.Alimento;
-import com.example.Patrones.Iterator.Agregado;
+import com.example.Logica.Pedido;
 import com.example.Patrones.Iterator.Iterator;
 
 public class AdicionGuacamole extends AdicionAbstract{
     
-    public AdicionGuacamole(Agregado pedido) {
+    public AdicionGuacamole(Pedido pedido) {
         super(pedido);
     }
     
@@ -37,6 +37,6 @@ public class AdicionGuacamole extends AdicionAbstract{
 
     @Override
     public void agregarElemento() {
-        pedido.agregarElemento(new Alimento("Guacamole", 3500, "COMIDA", "Aguacate, tomate, cebolla y limon"));
+        new Alimento("Guacamole", 3500, "COMIDA", "Aguacate, tomate, cebolla y limon", pedido);
     }
 }

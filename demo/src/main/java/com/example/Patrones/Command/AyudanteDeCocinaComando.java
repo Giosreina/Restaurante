@@ -7,7 +7,7 @@ public class AyudanteDeCocinaComando extends Comando{
         this.ayudanteDeCocina = ayudanteDeCocina;
     }
 
-    public String preparar(){
-        return ayudanteDeCocina.realizarTarea();
+    public void preparar(){
+        ayudanteDeCocina.realizarTarea();
     }
 }
