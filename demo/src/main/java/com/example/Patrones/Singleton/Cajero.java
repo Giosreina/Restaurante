@@ -1,36 +1,34 @@
 package com.example.Patrones.Singleton;
-import com.example.Patrones.MethodFactory.*;
 import com.example.Patrones.Singleton.Cajero;
 
-import org.w3c.dom.events.MouseEvent;
 
 import com.example.Logica.Pedido;
-
 import com.example.Patrones.Memento.Caja;
-import com.example.Patrones.Memento.HistorialDeCajas;
-
 import com.example.Patrones.Bridge.*;
+import com.example.Patrones.Observer.Observer.*;
+import com.example.Patrones.Prototype.*;
 
-public class Cajero {
+
+public class Cajero extends Personal {
     private static Cajero instancia;
     private String nombre;
     private String cedula;
     private String id;
-    private Fabricas fabrica = new LlamadoFactura();
     private Caja caja = new Caja();
-    private HistorialDeCajas historial;
-    private MetodoDePago metodoDePago;
     private Pago pago;
+    private Pedido compras;
+    private TurnoPrototype turnoCajero;
 
-    private Cajero(String nombre, String cedula, String id, HistorialDeCajas historial) {
+    private Cajero(String nombre, String cedula, String id, Caja caja) {
+        super(nombre);
         this.nombre = nombre;
         this.cedula = cedula;
         this.id = id;
-        this.historial = historial;
+        this.caja = caja;
     }
-    public static Cajero getInstancia(String nombre, String cedula, String id, HistorialDeCajas historial) {
+    public static Cajero getInstancia(String nombre, String cedula, String id, Caja caja) {
         if (instancia == null) {
-            instancia = new Cajero(nombre, cedula, id, historial);
+            instancia = new Cajero(nombre, cedula, id, caja);
         }
         return instancia;
     }
@@ -58,5 +56,14 @@ public class Cajero {
     }
     public void setId(String id) {
         this.id = id;
+    }
+    public void actualizar(Pedido pedido){
+        this.compras = pedido;
+    }
+    public String realizarTarea(){
+        return "cobrando";
+    }
+    public void asignarTurno(String turno){
+        this.turnoCajero = new HorariosDisponibles().obtenerTurno(turno);
     }
 }
