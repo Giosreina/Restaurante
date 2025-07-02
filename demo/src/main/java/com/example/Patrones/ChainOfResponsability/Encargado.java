@@ -1,8 +1,8 @@
 package com.example.Patrones.ChainOfResponsability;
 
-import com.example.Logica.Pedido;
+import com.example.Patrones.Visitor.*;
 
 public interface Encargado {
     public void setNext(Encargado next);
-    public void actualizar(Pedido comida);
+    public void limpiar(ElementoRestaurante elementoRestaurante);
 }
