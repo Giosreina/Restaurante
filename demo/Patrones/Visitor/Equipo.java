@@ -1,0 +1,23 @@
+package com.example.Patrones.Visitor;
+
+public class Equipo implements ElementoRestaurante {
+    private String tipo;
+    private int horasUso;
+
+    public Equipo(String tipo, int horasUso) {
+        this.tipo = tipo;
+        this.horasUso = horasUso;
+    }
+    public String getNombre(){
+        return "";
+    }
+
+    public String getTipo() { return tipo; }
+    public int getHorasUso() { return horasUso; }
+
+    @Override
+    public String aceptar(VisitorRestaurante visitor) {
+        return visitor.visitar(this);
+    }
+}
+
