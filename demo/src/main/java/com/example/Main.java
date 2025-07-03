@@ -25,6 +25,7 @@ public class Main {
         Caja caja = new Caja();
         MediadorRestaurante mediador = new MediadorRestauranteConcreto(caja, new HistorialDeCajas());
         Cocina cocina = new Cocina();
+        cocina.setMediador(mediador); // Se asigna el mediador a la cocina
         GrupoPersonal cocineros = new GrupoPersonal("cocineros");
         
         Cajero cajero = Cajero.getInstancia("Julioh Varon Belandya", caja, cocina);
@@ -36,8 +37,18 @@ public class Main {
         cocineros.agregarPersonal(ayudanteDeCocina);
         
         Mesero mesero = new Mesero("Carlos", cocina);
-        EstrategiaEntrega entrega = new EntregaSitio(cocina, mediador);
-        System.out.println(entrega.getMediador());
+        EstrategiaEntrega entrega;
+        if (mediador != null) {
+            System.out.println("El mediador no es nulo, continuando con la creación de la entrega.");
+            entrega = new EntregaSitio(cocina, (MediadorRestaurante) mediador);
+        }
+        else {
+            // Manejo de error si el mediador es nulo
+            System.out.println("Error: El mediador no puede ser nulo.");
+            return;
+        }
+
+        //Prueba de que existe el mediador
         
         terminal.imprimir("Nombre y metodo de envio porfa");
         Pedido pedido = new Pedido(terminal.recibir(), terminal.recibir());

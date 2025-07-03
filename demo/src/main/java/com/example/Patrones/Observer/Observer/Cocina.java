@@ -73,6 +73,4 @@ public class Cocina {
     public void setMediador(MediadorRestaurante mediador) {
         this.mediador = mediador;
     }
-    
-    
 }

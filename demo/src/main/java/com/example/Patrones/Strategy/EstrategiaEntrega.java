@@ -13,10 +13,14 @@ public abstract class EstrategiaEntrega {
 
     protected Cocina cocina;
     protected IOTerminal terminal = new IOTerminal();
-    protected MediadorRestaurante mediador;
+    protected MediadorRestaurante mediador = null;
 
     public EstrategiaEntrega(Cocina cocina, MediadorRestaurante mediador) {
         this.mediador = mediador;
+        // Verifica que el mediador no sea nulo
+        if (mediador == null) {
+            throw new IllegalArgumentException("El mediador no puede ser nulo");
+        }
         this.cocina = cocina;
         cocina.setEstrategiaEntrega(this);
     }
@@ -24,6 +28,8 @@ public abstract class EstrategiaEntrega {
     public MetodoDePago metodoPago() {
         switch (terminal.recibir()) {
             case "EFECTIVO":
+            //PRUEBA DE QUE EL MEDIADOR NO LLEGA AL SWITCH
+            System.out.println(getMediador());
                 return new PagoEnEfectivo(this.mediador);
             case "NEQUI":
                 return new PagoPorNequi();
