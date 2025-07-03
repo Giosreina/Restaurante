@@ -30,6 +30,7 @@ com\example\Utilities\IOTerminal.class
 com\example\Patrones\Command\Comando.class
 com\example\Patrones\Observer\Observer\Personal.class
 com\example\Patrones\AbstractFactory\Combo1.class
+com\example\Patrones\Facade\FacadeAtender.class
 com\example\Patrones\Command\CocinaInvocadora.class
 com\example\Patrones\ChainOfResponsability\Encargado.class
 com\example\Patrones\Visitor\Inspector.class
@@ -37,6 +38,7 @@ com\example\Patrones\Builder\BatidoCitricoBuilder.class
 com\example\Patrones\Observer\Observer\Cocina.class
 com\example\Logica\CuentaPago.class
 com\example\Patrones\Iterator\Iterator.class
+com\example\Patrones\Facade\FacadeAbstract.class
 com\example\Patrones\Prototype\Turno.class
 com\example\Patrones\AbstractFactory\Combo4.class
 com\example\Patrones\Strategy\EntregaSitio.class

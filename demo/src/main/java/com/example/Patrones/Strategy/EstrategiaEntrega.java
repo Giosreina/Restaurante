@@ -17,7 +17,6 @@ public abstract class EstrategiaEntrega {
 
     public EstrategiaEntrega(Cocina cocina, MediadorRestaurante mediador) {
         this.mediador = mediador;
-        // Verifica que el mediador no sea nulo
         if (mediador == null) {
             throw new IllegalArgumentException("El mediador no puede ser nulo");
         }
@@ -28,8 +27,6 @@ public abstract class EstrategiaEntrega {
     public MetodoDePago metodoPago() {
         switch (terminal.recibir()) {
             case "EFECTIVO":
-            //PRUEBA DE QUE EL MEDIADOR NO LLEGA AL SWITCH
-            System.out.println(getMediador());
                 return new PagoEnEfectivo(this.mediador);
             case "NEQUI":
                 return new PagoPorNequi();

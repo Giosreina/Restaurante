@@ -1,67 +1,11 @@
 package com.example;
 
-import com.example.Logica.Pedido;
-import com.example.Patrones.AbstractFactory.Combo1;
-import com.example.Patrones.AbstractFactory.CombosFactory;
-import com.example.Patrones.Mediator.MediadorRestaurante;
-import com.example.Patrones.Mediator.MediadorRestauranteConcreto;
-import com.example.Patrones.Memento.Caja;
-import com.example.Patrones.Memento.HistorialDeCajas;
-import com.example.Patrones.Observer.Observer.AyudanteDeCocina;
-import com.example.Patrones.Observer.Observer.Cocina;
-import com.example.Patrones.Observer.Observer.Cocinero;
-import com.example.Patrones.Observer.Observer.Personal;
-import com.example.Patrones.Proxy.Mesero;
-import com.example.Patrones.Singleton.Cajero;
-import com.example.Patrones.Strategy.EntregaSitio;
-import com.example.Patrones.Strategy.EstrategiaEntrega;
-import com.example.Patrones.composite.GrupoPersonal;
-import com.example.Utilities.IOTerminal;
+import com.example.Patrones.Facade.FacadeAbstract;
+import com.example.Patrones.Facade.FacadeAtender;
 
 public class Main {
     public static void main(String[] args) {
-        IOTerminal terminal = new IOTerminal();
-        
-        Caja caja = new Caja();
-        MediadorRestaurante mediador = new MediadorRestauranteConcreto(caja, new HistorialDeCajas());
-        Cocina cocina = new Cocina();
-        cocina.setMediador(mediador); // Se asigna el mediador a la cocina
-        GrupoPersonal cocineros = new GrupoPersonal("cocineros");
-        
-        Cajero cajero = Cajero.getInstancia("Julioh Varon Belandya", caja, cocina);
-        
-        Personal cocinero = new Cocinero("Juan", "COMIDA", cocina);
-        Personal ayudanteDeCocina = new AyudanteDeCocina("Sara", "BEBIDA", cocina);
-        
-        cocineros.agregarPersonal(cocinero);
-        cocineros.agregarPersonal(ayudanteDeCocina);
-        
-        Mesero mesero = new Mesero("Carlos", cocina);
-        EstrategiaEntrega entrega;
-        if (mediador != null) {
-            System.out.println("El mediador no es nulo, continuando con la creación de la entrega.");
-            entrega = new EntregaSitio(cocina, (MediadorRestaurante) mediador);
-        }
-        else {
-            // Manejo de error si el mediador es nulo
-            System.out.println("Error: El mediador no puede ser nulo.");
-            return;
-        }
-
-        //Prueba de que existe el mediador
-        
-        terminal.imprimir("Nombre y metodo de envio porfa");
-        Pedido pedido = new Pedido(terminal.recibir(), terminal.recibir());
-        CombosFactory combo1 = new Combo1();
-        combo1.crearAdicion(pedido).agregarElemento();
-        combo1.crearBatido().preparar(pedido);
-        
-        mesero.tomarPedido(pedido);
-        
-        terminal.imprimir(pedido.getDescripcion());
-        cocineros.realizarTarea();
-        
-        terminal.imprimir(Double.toString(caja.getDinero()));
-        
+        FacadeAbstract facadeAtender = new FacadeAtender();
+        facadeAtender.realizarCiclo();
     }
 }

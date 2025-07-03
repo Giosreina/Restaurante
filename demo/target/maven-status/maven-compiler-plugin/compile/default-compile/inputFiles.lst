@@ -28,11 +28,13 @@ C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\m
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Command\CocinaInvocadora.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Command\CocineroComando.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Command\Comando.java
-C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Composite\GrupoPersonal.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\composite\GrupoPersonal.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Decorator\AdicionAbstract.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Decorator\AdicionGuacamole.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Decorator\AdicionMazorcaGratinada.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Decorator\AdicionPapaFrita.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Facade\FacadeAbstract.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Facade\FacadeAtender.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Flyweight\Combo.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Flyweight\CreadorCombo.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Iterator\Agregado.java
