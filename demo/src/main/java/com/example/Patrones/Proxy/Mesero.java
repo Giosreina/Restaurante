@@ -5,14 +5,14 @@ import com.example.Patrones.Observer.Observer.Cocina;
 import com.example.Patrones.Observer.Observer.Personal;
 import com.example.Patrones.Prototype.HorariosDisponibles;
 import com.example.Patrones.Prototype.TurnoPrototype;
-import com.example.Utilities.SalidaTerminal;
+import com.example.Utilities.IOTerminal;
 
 public class Mesero extends Personal {
 
     private TurnoPrototype turnoMesero;
     private Cocina cocina;
     private Pedido pedidoActual;
-    private SalidaTerminal salida = new SalidaTerminal();
+    private IOTerminal salida = new IOTerminal();
 
     public Mesero(String nombre, Cocina cocina) {
         super(nombre);

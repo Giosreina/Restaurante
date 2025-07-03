@@ -9,14 +9,12 @@ com\example\Patrones\Mediator\MediadorRestauranteConcreto.class
 com\example\Logica\Factura.class
 com\example\Logica\Nequi.class
 com\example\Patrones\Visitor\ElementoRestaurante.class
-com\example\Patrones\ChainOfResponsability\CocineroEncargado.class
 com\example\Patrones\Visitor\VisitorRestaurante.class
 com\example\Patrones\Bridge\PagoEnEfectivo.class
 com\example\Patrones\Builder\BatidoTropicalBuilder.class
 com\example\Patrones\Strategy\EstrategiaEntrega.class
 com\example\Patrones\composite\GrupoPersonal.class
 com\example\Patrones\Prototype\TurnoPrototype.class
-com\example\Utilities\SalidaTerminal.class
 com\example\Patrones\AbstractFactory\Combo2.class
 com\example\Patrones\MethodFactory\Fabricas.class
 com\example\Patrones\Prototype\HorariosDisponibles.class
@@ -25,8 +23,10 @@ com\example\Logica\Taco.class
 com\example\Patrones\Mediator\MediadorRestaurante.class
 com\example\Patrones\Iterator\Agregado.class
 com\example\Patrones\Strategy\EntregaDomicilio.class
+com\example\Patrones\Visitor\Inventario.class
 com\example\Patrones\Singleton\Cajero.class
 com\example\Patrones\Command\CocineroComando.class
+com\example\Utilities\IOTerminal.class
 com\example\Patrones\Command\Comando.class
 com\example\Patrones\Observer\Observer\Personal.class
 com\example\Patrones\AbstractFactory\Combo1.class
@@ -60,6 +60,7 @@ com\example\Patrones\AbstractFactory\Combo3.class
 com\example\Patrones\Memento\HistorialDeCajas.class
 com\example\Patrones\Iterator\IteradorMapa.class
 com\example\Patrones\Command\AyudanteDeCocinaComando.class
+com\example\Patrones\ChainOfResponsability\Limpiador.class
 com\example\Patrones\Bridge\MetodoDePago.class
 com\example\Patrones\Strategy\EntregaRappi.class
 com\example\Patrones\Memento\CajaPasada.class

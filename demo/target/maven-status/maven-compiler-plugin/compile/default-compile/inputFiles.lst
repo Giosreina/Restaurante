@@ -22,8 +22,8 @@ C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\m
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Builder\BatidoRojoBuilder.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Builder\BatidoTropicalBuilder.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Builder\BatidoVerdeBuilder.java
-C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\ChainOfResponsability\CocineroEncargado.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\ChainOfResponsability\Encargado.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\ChainOfResponsability\Limpiador.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Command\AyudanteDeCocinaComando.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Command\CocinaInvocadora.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Command\CocineroComando.java
@@ -65,5 +65,6 @@ C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\m
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\Equipo.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\Ingrediente.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\Inspector.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\Inventario.java
 C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Patrones\Visitor\VisitorRestaurante.java
-C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Utilities\SalidaTerminal.java
+C:\Users\avila\OneDrive\Sistemas\Modelos de Programación\Restaurante\demo\src\main\java\com\example\Utilities\IOTerminal.java

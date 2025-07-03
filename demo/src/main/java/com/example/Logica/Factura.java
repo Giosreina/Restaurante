@@ -3,6 +3,7 @@ import java.util.Date;
 
 
 public class Factura {
+    private static int contador = 0;
     private int id;
     private String cliente;
     private String distribuidor;
@@ -10,10 +11,10 @@ public class Factura {
     private Date FECHA = new Date();
     private boolean estado = false; // false = pendiente, true = pagada
 
-    public Factura(int id, String cliente, String distribuidor, Pedido compras) {
-        this.id = id;
+    public Factura(String cliente, Pedido compras) {
+        this.id = contador++;
         this.cliente = cliente;
-        this.distribuidor = distribuidor;
+        this.distribuidor = "RESTAURANTE TACCOS LOS COMPAS";
         this.compras = compras;
     }
     public double getPrecio() {
@@ -37,5 +38,9 @@ public class Factura {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Factura{" + "id=" + id + ", cliente=" + cliente + ", distribuidor=" + distribuidor + ", compras=" + compras.getDescripcion() + ", FECHA=" + FECHA + '}';
+    }
 }

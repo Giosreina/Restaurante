@@ -7,14 +7,15 @@ import com.example.Logica.Pedido;
 import com.example.Patrones.MethodFactory.*;
 
 public class PagoPorTarjeta extends MetodoDePago {
+
     private CuentaRestaurante cuentaRestaurante;
     private Fabricas fabrica = new LlamadoFactura();
 
     @Override
-    public void procesarPago(int id, String cliente, String distribuidor, Pedido compras) {
+    public void procesarPago(String cliente, Pedido compras) {
         if (cuentaRestaurante == null) {
             cuentaRestaurante = CuentaRestaurante.getInstancia();
         }
-        cuentaRestaurante.recibirDinero(fabrica.crearFactura(id, cliente, distribuidor, compras).getPrecio());
+        cuentaRestaurante.recibirDinero(fabrica.crearFactura(cliente, compras).getPrecio());
     }
 }

@@ -15,8 +15,8 @@ public class MediadorRestauranteConcreto implements MediadorRestaurante {
     }
 
     @Override
-    public void generarFactura(int id, String cliente, String distribuidor, Pedido compras) {
-        caja.setFactura(fabricas.crearFactura(id, cliente, distribuidor, compras));
+    public void generarFactura(String cliente, Pedido compras) {
+        caja.setFactura(fabricas.crearFactura(cliente, compras));
     }
 
     @Override

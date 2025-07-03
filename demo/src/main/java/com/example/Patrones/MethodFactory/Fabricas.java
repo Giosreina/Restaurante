@@ -3,5 +3,5 @@ import com.example.Logica.Factura;
 import com.example.Logica.Pedido;
 
 public abstract class Fabricas {
-    public abstract Factura crearFactura(int id, String cliente, String distribuidor, Pedido compras);
+    public abstract Factura crearFactura(String cliente, Pedido compras);
 }
