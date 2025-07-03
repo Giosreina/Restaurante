@@ -15,8 +15,8 @@ public class Ingrediente implements ElementoRestaurante {
     public boolean estaCaducado() { return caducado; }
     public String getTipo() { return tipo; }
     @Override
-    public void aceptar(VisitorRestaurante visitor) {
-        visitor.visitar(this);
+    public String aceptar(VisitorRestaurante visitor) {
+        return visitor.visitar(this);
     }
 }
 

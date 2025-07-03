@@ -13,8 +13,8 @@ public class Equipo implements ElementoRestaurante {
     public int getHorasUso() { return horasUso; }
 
     @Override
-    public void aceptar(VisitorRestaurante visitor) {
-        visitor.visitar(this);
+    public String aceptar(VisitorRestaurante visitor) {
+        return visitor.visitar(this);
     }
 }
 
