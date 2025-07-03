@@ -17,6 +17,7 @@ com\example\Patrones\composite\GrupoPersonal.class
 com\example\Patrones\Prototype\TurnoPrototype.class
 com\example\Patrones\AbstractFactory\Combo2.class
 com\example\Patrones\MethodFactory\Fabricas.class
+com\example\Patrones\Strategy\EntregaSitio$1.class
 com\example\Patrones\Prototype\HorariosDisponibles.class
 com\example\Patrones\Visitor\Equipo.class
 com\example\Logica\Taco.class
@@ -46,6 +47,7 @@ com\example\Logica\Alimento.class
 com\example\Patrones\Decorator\AdicionGuacamole.class
 com\example\Logica\Persona.class
 com\example\Patrones\Observer\Observer\Cocinero.class
+com\example\Patrones\TemplateMethod\EntregaTemplate.class
 com\example\Patrones\AbstractFactory\CombosFactory.class
 com\example\Patrones\Decorator\AdicionPapaFrita.class
 com\example\Patrones\Bridge\PagoPorTarjeta.class
@@ -57,7 +59,9 @@ com\example\Patrones\Decorator\AdicionMazorcaGratinada.class
 com\example\Patrones\MethodFactory\LlamadoFactura.class
 com\example\Patrones\Builder\BatidoBuilder.class
 com\example\Patrones\Iterator\IteradorLista.class
+com\example\Patrones\Strategy\EntregaDomicilio$1.class
 com\example\Patrones\Visitor\Almacen.class
+com\example\Patrones\Strategy\EntregaRappi$1.class
 com\example\Patrones\AbstractFactory\Combo3.class
 com\example\Patrones\Memento\HistorialDeCajas.class
 com\example\Patrones\Iterator\IteradorMapa.class

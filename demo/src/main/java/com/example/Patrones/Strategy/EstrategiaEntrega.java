@@ -1,19 +1,12 @@
 package com.example.Patrones.Strategy;
 
 import com.example.Logica.Pedido;
-import com.example.Patrones.Bridge.MetodoDePago;
-import com.example.Patrones.Bridge.PagoEnEfectivo;
-import com.example.Patrones.Bridge.PagoPorNequi;
-import com.example.Patrones.Bridge.PagoPorTarjeta;
 import com.example.Patrones.Mediator.MediadorRestaurante;
 import com.example.Patrones.Observer.Observer.Cocina;
-import com.example.Utilities.IOTerminal;
 
 public abstract class EstrategiaEntrega {
-
     protected Cocina cocina;
-    protected IOTerminal terminal = new IOTerminal();
-    protected MediadorRestaurante mediador = null;
+    protected MediadorRestaurante mediador;
 
     public EstrategiaEntrega(Cocina cocina, MediadorRestaurante mediador) {
         this.mediador = mediador;
@@ -24,23 +17,9 @@ public abstract class EstrategiaEntrega {
         cocina.setEstrategiaEntrega(this);
     }
 
-    public MetodoDePago metodoPago() {
-        switch (terminal.recibir()) {
-            case "EFECTIVO":
-                return new PagoEnEfectivo(this.mediador);
-            case "NEQUI":
-                return new PagoPorNequi();
-            case "TARJETA":
-                return new PagoPorTarjeta();
-            default:
-                throw new AssertionError();
-        }
-    }
-
     public abstract String entregar(Pedido pedido);
 
     public MediadorRestaurante getMediador() {
         return this.mediador;
     }
-    
 }

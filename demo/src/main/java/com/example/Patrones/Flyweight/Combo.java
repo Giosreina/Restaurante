@@ -21,4 +21,30 @@ public class Combo {
     public void eliminarComida(Alimento comida) {
         comidas.eliminarElemento(comida);
     }
+
+    public Pedido getComidas() {
+        return comidas;
+    }
+
+    public void setComidas(Pedido comidas) {
+        this.comidas = comidas;
+    }
+
+    public CreadorCombo getCreador() {
+        return creador;
+    }
+
+    public void setCreador(CreadorCombo creador) {
+        this.creador = creador;
+    }
+
+    public double getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
+    }
+    
+    
 }
