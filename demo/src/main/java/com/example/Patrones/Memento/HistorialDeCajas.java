@@ -1,12 +1,14 @@
 package com.example.Patrones.Memento;
+
 import java.util.Map;
 
 import java.util.HashMap;
 import java.util.Date;
 
 public class HistorialDeCajas {
+
     private Map<Date, CajaPasada> historial = new HashMap<>();
-    private Caja caja;
+    private Caja cajaActual;
 
     public void addCaja(Caja caja) {
         historial.put(caja.getFactura().getFecha(), caja.saveCaja());
@@ -21,7 +23,12 @@ public class HistorialDeCajas {
     }
 
     public Caja restoreCaja(CajaPasada cajaPasada) {
-        caja.restoreCaja(cajaPasada);
-        return caja;
+        cajaActual.restoreCaja(cajaPasada);
+        return cajaActual;
     }
+
+    public Map<Date, CajaPasada> getHistorial() {
+        return historial;
+    }
+
 }

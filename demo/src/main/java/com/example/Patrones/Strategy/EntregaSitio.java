@@ -2,7 +2,7 @@ package com.example.Patrones.Strategy;
 
 import com.example.Logica.Pedido;
 import com.example.Patrones.Mediator.MediadorRestaurante;
-import com.example.Patrones.Observer.Observer.Cocina;
+import com.example.Patrones.Observer.Cocina;
 import com.example.Patrones.TemplateMethod.EntregaTemplate;
 
 public class EntregaSitio extends EstrategiaEntrega {

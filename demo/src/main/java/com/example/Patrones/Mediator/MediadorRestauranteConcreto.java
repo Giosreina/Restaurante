@@ -1,8 +1,11 @@
 package com.example.Patrones.Mediator;
 
+import java.util.Map;
+
 import com.example.Logica.Pedido;
 import com.example.Patrones.Memento.*;
 import com.example.Patrones.MethodFactory.*;
+import java.util.Date;
 
 public class MediadorRestauranteConcreto implements MediadorRestaurante {
     private Caja caja;
@@ -26,6 +29,11 @@ public class MediadorRestauranteConcreto implements MediadorRestaurante {
             return;
         }
         caja.pagarFactura();
-        historial.addCaja(caja);
+        historial.addCaja(caja.clone());
+    }
+
+    @Override
+    public Map<Date, CajaPasada> getHistorial() {
+        return historial.getHistorial();
     }
 }

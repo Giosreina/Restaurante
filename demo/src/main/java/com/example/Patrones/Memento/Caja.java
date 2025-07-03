@@ -25,7 +25,14 @@ public class Caja {
     }
 
     public CajaPasada saveCaja() {
-        return new CajaPasada(this);
+        return new CajaPasada(this.clone()); // Clona la caja antes de guardarla
+    }
+
+    public Caja clone() {
+        Caja nuevaCaja = new Caja();
+        nuevaCaja.dinero = this.dinero;
+        nuevaCaja.factura = this.factura ; // Clona la factura si no es nula
+        return nuevaCaja;
     }
 
     public Factura getFactura() {

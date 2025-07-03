@@ -1,4 +1,5 @@
-package com.example.Patrones.Observer.Observer;
+package com.example.Patrones.Observer;
+
 import com.example.Logica.Alimento;
 import com.example.Logica.Pedido;
 import com.example.Patrones.Prototype.HorariosDisponibles;
@@ -6,15 +7,15 @@ import com.example.Patrones.Prototype.*;
 import com.example.Utilities.IOTerminal;
 import java.util.ArrayList;
 
-public class AyudanteDeCocina extends Personal {
-    
+public class Cocinero extends Personal {
+
     private String condicion;
     private ArrayList<Alimento> alimentosPorPreparar = new ArrayList<>();
     private TurnoPrototype turnoCocinero;
     private Cocina cocina;
     private IOTerminal salida = new IOTerminal();
 
-    public AyudanteDeCocina(String nombre, String condicion, Cocina cocina) {
+    public Cocinero(String nombre, String condicion, Cocina cocina) {
         super(nombre);
         this.condicion = condicion;
         this.cocina = cocina;
@@ -38,7 +39,7 @@ public class AyudanteDeCocina extends Personal {
     public void realizarTarea() {
         for (Alimento alimento : alimentosPorPreparar) {
             alimento.setEstado(true);
-            salida.imprimir("El ayudante de cocina " + super.nombre + " esta preparando " + alimento.getNombre());
+            salida.imprimir("El cocinero " + super.nombre + " esta preparando " + alimento.getNombre());
             if (alimento.getPedido().isEstado()) {
                 cocina.entregarPedido(alimento.getPedido());
             }

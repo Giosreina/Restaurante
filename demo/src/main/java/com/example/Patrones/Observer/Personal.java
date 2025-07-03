@@ -1,4 +1,4 @@
-package com.example.Patrones.Observer.Observer;
+package com.example.Patrones.Observer;
 import com.example.Logica.Pedido;
 import com.example.Logica.Persona;
 

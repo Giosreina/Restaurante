@@ -1,4 +1,4 @@
-package com.example.Patrones.Observer.Observer;
+package com.example.Patrones.Observer;
 
 import java.util.ArrayList;
 import com.example.Logica.Pedido;

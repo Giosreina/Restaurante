@@ -1,8 +1,8 @@
 package com.example.Patrones.Proxy;
 
 import com.example.Logica.Pedido;
-import com.example.Patrones.Observer.Observer.Cocina;
-import com.example.Patrones.Observer.Observer.Personal;
+import com.example.Patrones.Observer.Cocina;
+import com.example.Patrones.Observer.Personal;
 import com.example.Patrones.Prototype.HorariosDisponibles;
 import com.example.Patrones.Prototype.TurnoPrototype;
 import com.example.Utilities.IOTerminal;

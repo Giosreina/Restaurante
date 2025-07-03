@@ -1,7 +1,7 @@
 package com.example.Patrones.composite;
 
 import com.example.Logica.Pedido;
-import com.example.Patrones.Observer.Observer.Personal;
+import com.example.Patrones.Observer.Personal;
 import java.util.ArrayList;
 
 public class GrupoPersonal extends Personal{

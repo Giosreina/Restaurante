@@ -3,7 +3,7 @@ package com.example.Patrones.TemplateMethod;
 import com.example.Logica.Pedido;
 import com.example.Patrones.Bridge.*;
 import com.example.Patrones.Mediator.MediadorRestaurante;
-import com.example.Patrones.Observer.Observer.Cocina;
+import com.example.Patrones.Observer.Cocina;
 import com.example.Utilities.IOTerminal;
 
 public abstract class EntregaTemplate {
@@ -31,15 +31,19 @@ public abstract class EntregaTemplate {
     protected abstract String entregarPedido(Pedido pedido);
 
     protected MetodoDePago obtenerMetodoDePago() {
-        switch (terminal.recibir().toUpperCase()) {
-            case "EFECTIVO":
-                return new PagoEnEfectivo(mediador);
-            case "NEQUI":
-                return new PagoPorNequi();
-            case "TARJETA":
-                return new PagoPorTarjeta();
-            default:
-                throw new IllegalArgumentException("Método de pago inválido");
+        while (true) {
+            String entrada = terminal.recibir().toUpperCase();
+            switch (entrada) {
+                case "EFECTIVO":
+                    return new PagoEnEfectivo(mediador);
+                case "NEQUI":
+                    return new PagoPorNequi();
+                case "TARJETA":
+                    return new PagoPorTarjeta();
+                default:
+                    terminal.imprimir("❌ Método de pago inválido. Intente con: EFECTIVO, NEQUI o TARJETA.");
+            }
         }
     }
+
 }

@@ -1,11 +1,12 @@
 package com.example.Patrones.Singleton;
 
+import com.example.Patrones.Observer.Cocina;
+import com.example.Patrones.Observer.Personal;
 import com.example.Patrones.Singleton.Cajero;
 
 import com.example.Logica.Pedido;
 import com.example.Patrones.Memento.Caja;
 import com.example.Patrones.Bridge.*;
-import com.example.Patrones.Observer.Observer.*;
 import com.example.Patrones.Prototype.*;
 
 public class Cajero extends Personal {
